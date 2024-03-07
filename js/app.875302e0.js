@@ -15,7 +15,7 @@
             }
             const s = e => ((0, r.dD)("data-v-a543ac78"), e = e(), (0, r.Cn)(), e),
                 f = { class: "hello" },
-                d = s(() => (0, r._)("p", null, [(0, r.Uk)(" Converter Website "), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(" U can choose inbetween"), (0, r._)("br"), (0, r.Uk)(" gramm"), (0, r._)("br"), (0, r.Uk)(" grains"), (0, r._)("br"), (0, r.Uk)(" and inches "), (0, r._)("br"), (0, r.Uk)("to Convert ")], -1)));
+                d = s(() => (0, r._)("p", null, [(0, r.Uk)(" Converter Website "), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(), (0, r._)("br"), (0, r.Uk)(" U can choose inbetween"), (0, r._)("br"), (0, r.Uk)(" Potato"), (0, r._)("br"), (0, r.Uk)(" Banana"), (0, r._)("br"), (0, r.Uk)(" and Tomato "), (0, r._)("br"), (0, r.Uk)("to Convert ")], -1)));
 
             function p(e, n, t, o, a, l) {
                 return (0, r.wg)(), (0, r.iD)("div", f, [(0, r._)("h1", null, (0, i.zw)(t.msg), 1), d]);
@@ -24,30 +24,7 @@
                 h = t(89);
             const m = (0, h.Z)(v, [["render", p], ["__scopeId", "data-v-a543ac78"]]);
             var g = m,
-                w = { name: "App", components: { HelloWorld: g }, methods: { toBanana: function (e, n) { 
-                    switch (n.toLowerCase()) { 
-                        case "grains": 
-                            return 15.4324 * e; // 1 gram = 15.4324 grains
-                        case "inches": 
-                            return 0.0393701 * e; // 1 millimeter = 0.0393701 inch
-                        default: 
-                            return console.log("Conversion failed"), e 
-                    } 
-                } }, props: { physicalQuantity: Object }, data: function () { return { fromValue: "", fromUnit: "", toUnit: "" } }, computed: { result: function () { 
-                    let e = parseFloat(this.fromValue); 
-                    if (isFinite(e)) { 
-                        let n = this.toBanana(e, this.fromUnit); 
-                        switch (this.toUnit.toLowerCase()) { 
-                            case "grains": 
-                                return parseFloat(n.toFixed(5)); 
-                            case "inches": 
-                                return parseFloat(n.toFixed(5)); 
-                            default: 
-                                return console.log("Error: Unsupported unit"), "value" 
-                        } 
-                    } 
-                    return this.fromValue 
-                } } };
+                w = { name: "App", components: { HelloWorld: g }, methods: { toBanana: function (e, n) { switch (n.toLowerCase()) { case "banana": return e; case "potato": return 7 * e; case "tomato": return 3 * e; default: return console.log("Convervsion failed"), e } } }, props: { physicalQuantity: Object }, data: function () { return { fromValue: "", fromUnit: "", toUnit: "" } }, computed: { result: function () { let e = parseFloat(this.fromValue); if (isFinite(e)) { let n = this.toBanana(e, this.fromUnit); switch (this.toUnit.toLowerCase()) { case "banana": return parseFloat(n.toFixed(5)); case "potato": return parseFloat((n / 7).toFixed(5)); case "tomato": return parseFloat((n / 3).toFixed(5)); default: return console.log("Error while converting time - resultUnit not detected!"), "value" } } return this.fromValue } } };
             const b = (0, h.Z)(w, [["render", c]]);
             var _ = b,
                 U = t(5431);
