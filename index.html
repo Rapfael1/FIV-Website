@@ -40,7 +40,9 @@
         <input type="number" id="inputValue" placeholder="Enter value">
         <select id="conversionType">
             <option value="gramsToGrains">Grams to Grains</option>
+            <option value="grainsToGrams">Grains to Grams</option>
             <option value="cmToInches">Centimeters to Inches</option>
+            <option value="inchesToCm">Inches to Centimeters</option>
         </select>
         <button onclick="convert()">Convert</button>
         <h2 id="outputValue">Output: </h2>
@@ -55,9 +57,15 @@
             if (conversionType === 'gramsToGrains') {
                 outputValue = inputValue * 15.4324; // 1 gram = 15.4324 grains
                 document.getElementById('outputValue').innerText = `Output: ${outputValue.toFixed(2)} grains`;
+            } else if (conversionType === 'grainsToGrams') {
+                outputValue = inputValue / 15.4324; // 1 grain = 1/15.4324 grams
+                document.getElementById('outputValue').innerText = `Output: ${outputValue.toFixed(2)} grams`;
             } else if (conversionType === 'cmToInches') {
                 outputValue = inputValue * 0.393701; // 1 cm = 0.393701 inches
                 document.getElementById('outputValue').innerText = `Output: ${outputValue.toFixed(2)} inches`;
+            } else if (conversionType === 'inchesToCm') {
+                outputValue = inputValue / 0.393701; // 1 inch = 1/0.393701 cm
+                document.getElementById('outputValue').innerText = `Output: ${outputValue.toFixed(2)} cm`;
             }
         }
     </script>
